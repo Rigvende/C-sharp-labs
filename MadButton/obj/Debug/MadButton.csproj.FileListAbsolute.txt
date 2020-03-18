@@ -1,0 +1,14 @@
+D:\Soft\!temp\80333_Patrusova\MadButton\bin\Debug\MadButton.exe.config
+D:\Soft\!temp\80333_Patrusova\MadButton\bin\Debug\MadButton.exe
+D:\Soft\!temp\80333_Patrusova\MadButton\bin\Debug\MadButton.pdb
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.g.resources
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.exe
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.pdb
+D:\Soft\!temp\80333_Patrusova\MadButton\obj\Debug\MadButton.csprojAssemblyReference.cache
