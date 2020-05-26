@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Labs2_2_var4.StarSystem">
+    <Position X="5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAAAYAAEAAAAAAAAAAQAAACAAAA=</HashCode>
+      <FileName>StarSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs2_2_var4.Planet">
+    <Position X="2.75" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAABAAACAAYAQCAAAECQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Planet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs2_2_var4.Star">
+    <Position X="7.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAQAAAACAAAAYgQAAAAEARAAAAAAAAAAAQA=</HashCode>
+      <FileName>Star.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs2_2_var4.Earth">
+    <Position X="0.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAhAAAAAQAAAAAAAAAwAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Earth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs2_2_var4.Mars">
+    <Position X="4.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAEAAAAQAAAQEAAAAAAAQAAAAAAEAAAAAA=</HashCode>
+      <FileName>Mars.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labs2_2_var4.Sun">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAAAABAAAAAAAAQAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sun.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
