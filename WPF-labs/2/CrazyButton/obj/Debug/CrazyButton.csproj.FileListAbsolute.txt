@@ -1,0 +1,14 @@
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\bin\Debug\CrazyButton.exe.config
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\bin\Debug\CrazyButton.exe
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\bin\Debug\CrazyButton.pdb
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.csprojAssemblyReference.cache
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.g.resources
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.exe
+D:\Soft\!temp\80333_Patrusova\WPF-labs\2\CrazyButton\obj\Debug\CrazyButton.pdb
