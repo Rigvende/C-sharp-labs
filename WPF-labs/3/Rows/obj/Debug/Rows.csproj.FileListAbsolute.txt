@@ -1,0 +1,16 @@
+D:\Soft\!temp\80333_Patrusova\Rows\bin\Debug\Rows.exe.config
+D:\Soft\!temp\80333_Patrusova\Rows\bin\Debug\Rows.exe
+D:\Soft\!temp\80333_Patrusova\Rows\bin\Debug\Rows.pdb
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows_MarkupCompile.lref
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.g.resources
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.exe
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.pdb
+D:\Soft\!temp\80333_Patrusova\Rows\obj\Debug\Rows.csprojAssemblyReference.cache

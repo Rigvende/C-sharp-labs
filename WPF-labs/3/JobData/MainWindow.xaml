@@ -1,0 +1,212 @@
+﻿<Window x:Class="JobData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JobData"
+        mc:Ignorable="d"
+        Title="Сведения о трудовой деятельности" Height="500" Width="950">
+    <Window.Resources>
+        <ControlTemplate x:Key="ErrorTemplate">
+            <StackPanel Orientation="Horizontal">
+                <AdornedElementPlaceholder />
+                <TextBlock Foreground="#D84727" FontSize="24">*</TextBlock>
+            </StackPanel>
+        </ControlTemplate>
+        <Style TargetType="Button" x:Key="ButtonAppearance">
+            <Setter Property="Background" Value="Lavender" />
+            <Setter Property="FontFamily" Value="Book Antiqua" />
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Width" Value="220" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+        <Style TargetType="Button" x:Key="ButtonValidation" BasedOn="{StaticResource ButtonAppearance}">
+            <Setter Property="IsEnabled" Value="False"/>
+            <Style.Triggers>
+                <MultiDataTrigger>
+                    <MultiDataTrigger.Conditions>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=tbx_Surname}" Value="false"/>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=tbx_Salary}" Value="false"/>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=comboBox_Profession}" Value="false"/>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=comboBox_Street}" Value="false"/>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=tbx_House}" Value="false"/>
+                        <Condition Binding ="{Binding Path=(Validation.HasError),ElementName=comboBox_City}" Value="false"/>
+                    </MultiDataTrigger.Conditions>
+                    <Setter Property="IsEnabled" Value="True"/>
+                </MultiDataTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="10 0 0 0" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontFamily" Value="Arial Black" />
+            <Setter Property="Background" Value="LightSteelBlue" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        <Style TargetType="TextBlock" x:Key="TextBoxTitle">
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="FontWeight" Value="DemiBold" />
+            <Setter Property="HorizontalAlignment" Value="Right" />
+        </Style>
+        <Style x:Key="inputStyle">
+            <Setter Property="Control.HorizontalAlignment" Value="Center" />
+            <Setter Property="Control.VerticalAlignment" Value="Center" />
+            <Setter Property="Control.Height" Value="30" />
+            <Setter Property="Control.RenderTransformOrigin" Value="0.475,-1.045" />
+            <Setter Property="Control.MinWidth" Value="250" />
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="Control.ToolTip"
+                        Value="{Binding RelativeSource={x:Static RelativeSource.Self},
+                        Path=(Validation.Errors)[0].ErrorContent}" />
+                    <Setter Property="Control.Foreground" Value="#D84727" />
+                    <Setter Property="Control.Background" Value="#f7e5e1" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style TargetType="ComboBox" x:Key="cbxStyle" BasedOn="{StaticResource ResourceKey=inputStyle}">
+            <Setter Property="StaysOpenOnEdit" Value="True" />
+            <Setter Property="IsEditable" Value="True" />
+        </Style>
+    </Window.Resources>
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="164*" />
+            <ColumnDefinition Width="299*"/>
+            <ColumnDefinition Width="479*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="_Фамилия" Target="{Binding ElementName=tbx_Surname}" Margin="0,18,0,19" Width="93" />
+        <TextBox x:Name="tbx_Surname" Grid.Column="1" Grid.Row="0" Style="{StaticResource inputStyle}" Margin="26,18,23,19" Width="250">
+            <TextBox.Text>
+                <Binding Path="Surname" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:StringRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Content="_Зарплата" Target="{Binding ElementName=tbx_Salary}" Grid.Row="1" Margin="0,19,0,18" Width="94" />
+        <TextBox x:Name="tbx_Salary" Grid.Column="1" Grid.Row="1" Style="{StaticResource inputStyle}" Margin="26,19,23,18" Width="250">
+            <TextBox.Text>
+                <Binding Path="Salary" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <ExceptionValidationRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Label Content="_Должность" Target="{Binding ElementName=comboBox_Profession}" Grid.Row="2" Margin="0,18,0,19" Width="114" />
+        <ComboBox x:Name="comboBox_Profession" Grid.Column="1" Grid.Row="2" Style="{StaticResource cbxStyle}" Margin="26,18,23,19" Width="250">
+            <ComboBox.Text>
+                <Binding Path="Profession" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:StringRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </ComboBox.Text>
+            <TextBlock Text="Программист"/>
+            <TextBlock Text="Тестировщик"/>
+            <TextBlock Text="Преподаватель"/>
+        </ComboBox>
+        <Label Content="_Город" Target="{Binding ElementName=comboBox_City}" Grid.Row="3" Margin="0,19,0,18" Width="63" />
+        <ComboBox x:Name="comboBox_City" Grid.Column="1" Grid.Row="3" Style="{StaticResource cbxStyle}" Margin="26,19,23,18" Width="250">
+            <ComboBox.Text>
+                <Binding Path="City" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules >
+                        <local:StringRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </ComboBox.Text>
+            <TextBlock Text="Минск"/>
+            <TextBlock Text="Могилев"/>
+            <TextBlock Text="Гродно"/>
+        </ComboBox>
+        <Label Content="_Улица" Target="{Binding ElementName=comboBox_Street}" Grid.Row="4" Margin="0,18,0,19" Width="65" />
+        <ComboBox x:Name="comboBox_Street" Grid.Column="1" Grid.Row="4" Style="{StaticResource cbxStyle}" Margin="26,18,23,19" Width="250">
+            <ComboBox.Text>
+                <Binding Path="Street" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:StringRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </ComboBox.Text>
+            <TextBlock Text="Руссиянова"/>
+            <TextBlock Text="Советская"/>
+            <TextBlock Text="Центральная"/>
+        </ComboBox>
+        <Label Content="_Дом" Target="{Binding ElementName=tbx_House}" Grid.Row="5" Margin="0,19,0,18" Width="48" />
+        <TextBox x:Name="tbx_House" Grid.Column="1" Grid.Row="5" Style="{StaticResource inputStyle}" Margin="26,19,23,18" Width="250">
+            <TextBox.Text>
+                <Binding Path="House" NotifyOnValidationError="True"
+			        UpdateSourceTrigger="PropertyChanged">
+                    <Binding.ValidationRules>
+                        <local:StringRule />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+        <Button x:Name="btn_Submit" Style="{StaticResource ButtonValidation}" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="6" Margin="102,18,102,19" Content="Добавить" Click="Btn_Submit_Click" Height="Auto" Width="Auto">
+            <Button.Effect>
+                <DropShadowEffect Color="#FF959393"/>
+            </Button.Effect>
+        </Button>
+        <Button x:Name="btn_Show" Style="{StaticResource ButtonAppearance}" Grid.Column="2" Grid.Row="6" Margin="149,18,149,19" Content="Вывести данные" Click="Btn_Show_Click" Height="Auto" Width="Auto">
+            <Button.Effect>
+                <DropShadowEffect Color="#FF959393"/>
+            </Button.Effect>
+        </Button>
+        <ListBox x:Name="lResult" BorderBrush="#042A2B"
+            Grid.Column="2" Grid.RowSpan="6"
+            Margin="65,10,64,10"
+            ItemsSource="{Binding}" MinWidth="350" Width="350" HorizontalAlignment="Center" HorizontalContentAlignment="Center">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <GroupBox MinWidth="250" Header="{Binding Path=Index}" Background="LightGoldenrodYellow" FontFamily="Courier New">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*" />
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Grid.Row="0" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Фамилия: " />
+                            <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding Path=Surname}" />
+                            <TextBlock Grid.Row="1" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Зарплата: " />
+                            <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding Path=Salary}" />
+                            <TextBlock Grid.Row="2" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Должность: " />
+                            <TextBlock Grid.Row="2" Grid.Column="1" Text="{Binding Path=Profession}" />
+                            <TextBlock Grid.Row="3" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Город: " />
+                            <TextBlock Grid.Row="3" Grid.Column="1" Text="{Binding Path=City}" />
+                            <TextBlock Grid.Row="4" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Улица: " />
+                            <TextBlock Grid.Row="4" Grid.Column="1" Text="{Binding Path=Street}" />
+                            <TextBlock Grid.Row="5" Grid.Column="0" Style="{StaticResource TextBoxTitle}" Text="Дом: " />
+                            <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding Path=House}" />
+                        </Grid>
+                    </GroupBox>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>

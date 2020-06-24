@@ -1,0 +1,15 @@
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\bin\Debug\TwoFunctions.exe.config
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\bin\Debug\TwoFunctions.exe
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\bin\Debug\TwoFunctions.pdb
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions_MarkupCompile.lref
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions.g.resources
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\JobData Lab 3.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\JobData Lab 3.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions.exe
+D:\Soft\!temp\80333_Patrusova\TwoFunctions\obj\Debug\TwoFunctions.pdb
