@@ -1,0 +1,14 @@
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.csprojAssemblyReference.cache
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\Figure\bin\Debug\Figure.exe.config
+D:\Soft\!temp\80333_Patrusova\Figure\bin\Debug\Figure.exe
+D:\Soft\!temp\80333_Patrusova\Figure\bin\Debug\Figure.pdb
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.g.resources
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.exe
+D:\Soft\!temp\80333_Patrusova\Figure\obj\Debug\Figure.pdb

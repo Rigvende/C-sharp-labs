@@ -1,0 +1,108 @@
+﻿<Window x:Class="Figure.MainWindow"
+       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Трапеция" 
+        Height="600" Width="800"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="Lavender"/>
+            <Setter Property="BorderThickness" Value="4"/>
+        </Style>
+    </Window.Resources>
+    <Window.CommandBindings>
+        <CommandBinding Command="Open" Executed="OpenFile"/>
+        <CommandBinding Command="Save" Executed="SaveFile"/>
+    </Window.CommandBindings>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="75"/>
+            <RowDefinition/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Menu Grid.Row="0">
+            <MenuItem Header="Meню">
+                <MenuItem Command="Open">
+                </MenuItem>
+                <MenuItem Command="Save">
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="Редактировать">
+                <MenuItem Header="Цвет линии" Click="ChangeBrush">
+                </MenuItem>
+                <MenuItem Header="Цвет фона" Click="ChangeFon">
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+
+        <StackPanel  Grid.Row="1" Background="Lavender" Orientation="Horizontal">
+            <Border>
+                <StackPanel Width="120">
+                    <Label Opacity="0.8" FontWeight="Bold" HorizontalAlignment="Center">Толщина линии</Label>
+                    <Slider x:Name="slWight" TickPlacement="BottomRight" Margin="10"
+                            IsSnapToTickEnabled="True" TickFrequency="1" Height="20" Width="100"/>                    
+                </StackPanel>
+            </Border>
+            <Border>
+                <StackPanel Orientation="Vertical">
+                    <Button Height="60" Width="85" Click="ChangeBrush">
+                        <Label Opacity="0.8" FontWeight="Bold" Margin="0,0,0,30">Цвет линии</Label>
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="icons\Brush.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Height="7" x:Name="BuLine"/>
+                </StackPanel>
+            </Border>
+            <Border>
+                <StackPanel Orientation="Vertical">
+                    <Button Height="60" Width="85" Click="ChangeFon">
+                        <Label Opacity="0.8" FontWeight="Bold" Margin="0,0,0,30">Цвет фона</Label>
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="icons\Fon.jpg"/>
+                        </Button.Background>
+                    </Button>
+                    <Button Height="7" x:Name="BuFon"/>
+                </StackPanel>
+            </Border>
+            <Border>
+                <Button Height="67" Width="85" Command="Save">
+                    <Label Opacity="0.8" FontWeight="Bold" Margin="0,0,0,30">Сохранить</Label>
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="icons\Save.jpg"/>
+                    </Button.Background>
+                </Button>
+            </Border>
+            <Border>
+                <Button Height="67" Width="85" Command="Open">
+                    <Label Opacity="0.8" FontWeight="Bold" Margin="0,0,0,30">Открыть</Label>
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="icons\Open.jpg"/>
+                    </Button.Background>
+                </Button>
+            </Border>
+        </StackPanel>
+
+        <Grid x:Name="Grid" Grid.Row="2">
+            <Image Grid.Row="2" Name="canvas" Source="icons\Space.gif" Stretch="Fill" Opacity="1.0" 
+                   MouseDown="SpaceMouseDown" MouseMove="SpaceMouseMove">
+            </Image>
+        </Grid>
+
+        <StatusBar Grid.Row="3" Background="Lavender">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <StatusBarItem x:Name="Status"></StatusBarItem>
+                <StatusBarItem Grid.Column="1" x:Name="stbFile">Файл: безымянный</StatusBarItem>
+            </Grid>
+        </StatusBar>
+    </Grid>
+</Window>
