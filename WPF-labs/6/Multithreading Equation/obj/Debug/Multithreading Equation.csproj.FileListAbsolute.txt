@@ -1,0 +1,16 @@
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\bin\Debug\Multithreading Equation.exe.config
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\bin\Debug\Multithreading Equation.exe
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\bin\Debug\Multithreading Equation.pdb
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.csprojAssemblyReference.cache
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\EquationSettings.baml
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\MainWindow.baml
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\EquationSettings.g.cs
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\MainWindow.g.cs
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\App.g.cs
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation_MarkupCompile.cache
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.g.resources
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading_Equation.Properties.Resources.resources
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.csproj.GenerateResource.cache
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.csproj.CoreCompileInputs.cache
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.exe
+D:\Soft\!temp\80333_Patrusova\Multithreading Equation\obj\Debug\Multithreading Equation.pdb
