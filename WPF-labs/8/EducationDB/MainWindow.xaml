@@ -1,0 +1,76 @@
+﻿<Window x:Class="EducationDB.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:EducationDB.entity"
+        Title="Студенты"
+        Height="500" MaxWidth="960" MinWidth="370" MinHeight="370" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <local:Student x:Key="Student"></local:Student>
+        <Style TargetType="Button">
+            <Setter Property="MaxHeight" Value="80"/>
+            <Setter Property="Opacity" Value="0.8"/>
+            <Setter Property="Background" Value="Lavender"/>
+        </Style>
+        <Style TargetType="DataGridCell" x:Key="FIO">
+            <Setter Property="FontFamily" Value="Trebuchet MC"/>
+            <Setter Property="FontSize" Value="16"/>            
+            <Setter Property="TextBlock.TextAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="DataGridCell" BasedOn="{StaticResource ResourceKey=FIO}" x:Key="First">
+            <Setter Property="TextBlock.TextAlignment" Value="Right" />            
+        </Style>
+        <Style TargetType="{x:Type DataGridColumnHeader}">
+            <Setter Property="Background" Value="Lavender" />
+            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Margin" Value="5,0,0,0"/>           
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition  />
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <GridSplitter Height="20"/>
+            <UniformGrid Rows="1" Columns="1" Height="40">
+                <Button x:Name="create" Width="200" Click="CreateStudent_Click" FontFamily="Arial" FontSize="16">Добавить студента</Button>
+            </UniformGrid>
+            <GridSplitter Height="20"/>
+            <UniformGrid Rows="1" Columns="1" Height="40">
+                <Button x:Name="delete" Width="200" Click="DeleteStudent_Click" FontFamily="Arial" FontSize="16">Удалить</Button>
+            </UniformGrid>
+            <GridSplitter Height="20"/>
+            <UniformGrid Rows="1" Columns="1" Height="40">
+                <Button x:Name="edit" Width="200" Click="EditStudent_Click" FontFamily="Arial" FontSize="16">Редактировать</Button>
+            </UniformGrid>
+            <GridSplitter Height="50"/>
+            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Background="White" Orientation="Horizontal">
+                <Label>Поиск (введите фамилию):</Label>
+                <TextBox x:Name="surnameFilter" TextChanged="SurnameFilter_TextChanged" Height="20" Width="130"></TextBox>
+            </StackPanel>
+            <GridSplitter Height="20"/>
+            <Button x:Name="returnBtn" IsEnabled="False" Width="150" Click="Return_Click" Background="LightGoldenrodYellow">Вернуться к списку</Button>
+        </StackPanel>
+        <DataGrid x:Name="studentsField"  Grid.Column="1" LoadingRow="DataGrid_LoadingRow" 
+                  CanUserAddRows="False" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray"
+                  RowBackground="LightGray" AlternatingRowBackground="White" >
+            <DataGrid.Columns>                
+                <DataGridTemplateColumn Header="Фото" Width="70" >
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image MaxHeight="70" MaxWidth="70" Source="{Binding Photo}" Stretch="UniformToFill"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Header="Фамилия" CellStyle="{StaticResource First}" Binding="{Binding Path=Surname}" Width="120" />
+                <DataGridTextColumn Header="Имя" CellStyle="{StaticResource FIO}" Binding="{Binding Path=Name}" Width="120" />
+                <DataGridTextColumn Header="Пол" CellStyle="{StaticResource FIO}" Binding="{Binding Path=Gender}" Width="90" />
+                <DataGridTextColumn Header="Возраст" CellStyle="{StaticResource FIO}" Binding="{Binding Path=Age}" Width="90" />
+                <DataGridTextColumn Header="Группа" CellStyle="{StaticResource FIO}" Binding="{Binding Path=GroupNumber}" Width="90" />
+            </DataGrid.Columns>
+        </DataGrid>               
+    </Grid>
+</Window>
