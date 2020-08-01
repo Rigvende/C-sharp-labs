@@ -65,7 +65,11 @@ namespace EducationDB
                 ObservableCollection<Student> students = new ObservableCollection<Student>();
                 foreach (var student in studentsList)
                 {
-                    if (student.Surname.Contains(surnameFilter.Text)) students.Add(student);
+                    if (student.Surname.Contains(surnameFilter.Text)) 
+                    {
+                        students.Add(student);
+                    }
+                    returnBtn.IsEnabled = true;
                 }
                 studentsField.ItemsSource = students;
             }
@@ -74,6 +78,8 @@ namespace EducationDB
         private void Return_Click(object sender, RoutedEventArgs e)
         {
             FillDataGrid();
+            surnameFilter.Text = "";
+            returnBtn.IsEnabled = false;
         }
 
     }
