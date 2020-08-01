@@ -66,7 +66,7 @@
                 <TextBox x:Name="surnameFilter" TextChanged="SurnameFilter_TextChanged" Height="20" Width="130"></TextBox>
             </StackPanel>
             <GridSplitter Height="20"/>
-            <Button x:Name="return" Width="150" Click="Return_Click" Background="LightGoldenrodYellow">Вернуться к списку</Button>
+            <Button x:Name="returnBtn" IsEnabled="False" Width="150" Click="Return_Click" Background="LightGoldenrodYellow">Вернуться к списку</Button>
         </StackPanel>
         <ListBox x:Name="studentsField" 
                  HorizontalContentAlignment="Stretch"
