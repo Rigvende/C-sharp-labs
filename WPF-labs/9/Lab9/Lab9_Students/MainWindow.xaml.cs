@@ -144,6 +144,7 @@ namespace Lab9_Students
             xdoc.Add(groupss);
             string path = Path.Combine((new DirectoryInfo(Directory.GetCurrentDirectory())).FullName, "files");
             xdoc.Save(path + "\\students.xml");
+            MessageBox.Show("Данные успешно сохранены", "", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         
         private void UpdateControls()
