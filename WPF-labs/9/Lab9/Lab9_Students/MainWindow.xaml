@@ -1,0 +1,117 @@
+﻿<Window x:Class="Lab9_Students.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab9_Students" 
+        xmlns:info="clr-namespace:Lab9_Students.Infrastucture"
+        mc:Ignorable="d"
+        Title="Students" Height="600" Width="600">
+    
+    <Window.Resources>
+        <info:ImageSourceConverter x:Key="ImageConverter"/>
+        <info:IndividualPriceConverter x:Key="PriceConverter"/>
+    </Window.Resources>
+    
+    <Grid Margin="10" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height ="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel >
+            <Button  x:Name="SaveToXml" Margin="0,0,0,0" Height="20" Background="LightGreen" Content="Сохранить данные в файл" Click="SaveToXml_Click"/>
+        </StackPanel>
+        <StackPanel>
+            <TextBlock Margin="0,30,0,10">Выберите специальность:</TextBlock>
+            <ComboBox x:Name="cBoxGroup"
+                Margin="0"
+                DisplayMemberPath="Specialty"
+                ItemsSource="{Binding}"
+                SelectedValuePath="GroupId"
+                SelectedIndex="0"/>
+
+            <Button x:Name="AddGroup" Margin="10,20,10,0" Height="20" Background="Lavender" Content="Добавить группу" Click="AddGroup_Click"/>
+            <Button x:Name="ChangeGroup" Margin="10,21,10,0" Height="20" Background="Lavender" Content="Изменить группу" Click="ChangeGroup_Click"/>
+            <Button x:Name="RemoveGroup" Margin="10,20,10,0" Height="20" Background="Lavender" Content="Удалить группу" Click="RemoveGroup_Click"/>
+        </StackPanel>
+
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height ="90"/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Margin="10,0,0,0" Grid.Row="0">Специальность:</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1"
+                Text="{Binding ElementName=cBoxGroup,
+                Path=SelectedItem.Specialty,
+                StringFormat={}{0}}"
+                Margin="0,0,0,0"/>
+            <TextBlock Margin="10,20,0,0" Grid.Row="0">Стоимость:</TextBlock>
+            <TextBlock Grid.Row="0" Grid.Column="1"
+                Text="{Binding ElementName=cBoxGroup,
+                Path=SelectedItem.Price,
+                StringFormat={}{0}}"
+                Margin="0,20,0,0"/>
+            <TextBlock Margin="10,40,10,10">Начало обучения:</TextBlock>
+            <TextBlock Grid.Column="1"
+                Text="{Binding ElementName=cBoxGroup,
+                Path=SelectedItem.StartDate,
+                StringFormat={}{0:dd.MM.yyyy}}"
+                Margin="0,40,0,0"/>
+            <TextBlock Margin="10,60,10,10">Конец обучения:</TextBlock>
+            <TextBlock Grid.Column="1"
+                Text="{Binding ElementName=cBoxGroup,
+                Path=SelectedItem.EndDate,
+                StringFormat={}{0:dd.MM.yyyy}}"
+                Margin="0,60,0,0"/>
+            <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+                <Button x:Name="AddStudentToGrop" Margin="10" Height="20" Background="LightSteelBlue" Content="Добавить студента" Click="AddStudentToGroup_Click"/>
+                <Button x:Name="ChangeStudent"  Margin="10" Height="20" Background="LightSteelBlue" Content="Изменить студента" Click="ChangeStudent_Click"/>
+                <Button x:Name="RemoveStudentFromGroup" Margin="10" Height="20" Background="LightSteelBlue" Content="Удалить студента" Click="RemoveStudentFromGroup_Click" />
+            </StackPanel>
+        </Grid>
+        
+        <ScrollViewer Grid.Row="1" Grid.ColumnSpan="2">
+            <ListBox x:Name="cBoxStudent" DataContext="{Binding ElementName=cBoxGroup,
+                    Path=SelectedItem}"
+                    ItemsSource="{Binding Path=Students}"
+                     Background="LightGray">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Image Width="50"
+                                Source="{Binding Path=Photo, Converter = {StaticResource ImageConverter}}"/>
+                            <StackPanel Grid.Column="1" >
+                                <TextBlock Text="{Binding
+                                    Path=Name}" Margin="30,0,0,0"/>                               
+                                <TextBlock Text="{Binding
+                                    Path=DateOfBirth,
+                                    StringFormat={}{0:dd.MM.yyyy}}"
+                                    Margin="30,0,0,0"/>                               
+                                <TextBlock Text="{Binding 
+                                    Path=IndividualPrice, 
+                                    Converter={StaticResource PriceConverter}}" 
+                                    Margin="30,0,0,0"></TextBlock>
+                            </StackPanel>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </ScrollViewer>
+        
+        
+    </Grid>
+</Window>
