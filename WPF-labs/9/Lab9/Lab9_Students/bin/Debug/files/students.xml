@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<groups>
+  <group grId="1" price="3000.00" specialty="Веб-разработка" start="2020-01-09T00:00:00" end="2022-06-24T00:00:00">
+    <student name="Абрам Хакерман" birthday="1980-08-05T00:00:00" indiPrice="2400.00" photo="1.jpg" discount="false" stId="6" />
+    <student name="Томас Андерсон" birthday="1986-07-28T00:00:00" indiPrice="3000.00" photo="2.jpg" discount="false" stId="7" />
+    <student name="sdfdfsdf" birthday="2020-08-28T00:00:00" indiPrice="3000.00" photo="_1598614867558.jpg" discount="false" stId="11" />
+  </group>
+  <group grId="2" price="2500.00" specialty="Системное администрирование" start="2020-09-01T00:00:00" end="2022-06-25T00:00:00">
+    <student name="Джо Макмиллан" birthday="1996-06-14T00:00:00" indiPrice="2500.00" photo="3.jpg" discount="false" stId="3" />
+    <student name="Марианна Патрусова" birthday="1989-05-01T00:00:00" indiPrice="2000.00" photo="4.jpg" discount="false" stId="4" />
+  </group>
+</groups>
